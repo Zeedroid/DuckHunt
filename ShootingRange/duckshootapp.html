@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Duck Shoot Game </title>
+<script type="text/javascript" src="js/jquery-2.1.1.min"></script>
+<script type="text/javascript" src="js/duckshootapp.js"></script>
+<script type="text/javascript" src="js/modernizr.js"></script>
+
+
+</head>
+<body>
+
+<div id="canvases">
+<canvas id="background-layer" width="1280" height="899"> Your browser does not support HTML5 Canvas.</canvas>
+<canvas id="backcloud-layer" width="1280" height="899"> Your browser does not support HTML5 Canvas.</canvas>
+<canvas id="game-layer" width="1280" height="899"> Your browser does not support HTML5 Canvas.</canvas>
+<canvas id="cloud-layer" width="1280" height="899"> Your browser does not support HTML5 Canvas.</canvas>
+<canvas id="zoom-layer" style="cursor: url(images/Crosshair.cur)"> Your browser does not support HTML5 Canvas.</canvas>
+<canvas id="score-layer" width="1280" height="100"> Your browser does not support HTML5 Canvas.</canvas>
+</div>
+
+
+<div  class="container" style="background-color:#A6Ac23" id="scoreboard" width="1280px">
+	<div style="height: 100px;" id="status">Day: <span id="gameLevel">1		</span>Ducks Shot  : <span id="totalDucks">0</span>Head Shot   : <span id="totalHeads">0</span>Body Shot   : <span id="totalBodys">0</span>Total Score : <span id="totalScore">0</span></div>
+</div>
+
+<script type="text/javascript">
+document.getElementsByTagName("body")[0].style.cursor = "url('images/Crosshair2.cur'), auto";
+</script>
+
+<style>
+	body {
+	font-size: 24px;
+	cursor: default;
+	}
+	#canvases {
+		width: 1280px;
+		height: 899px;
+		position: relative;
+	}
+	canvas { position: absolute; }
+	#score-layer { z-index: 6} 
+	#zoom-layer { z-index: 5 }
+	#cloud-layer { z-index: 4 }
+	#game-layer { z-index: 3 }
+	#backcloud-layer { z-index: 2 }
+	#background-layer { z-index: 1 }
+	#scoreboard {
+		width: 1280px;
+		height: 50px;
+		position: relative;
+	}
+	ul {
+		list-style-type: none;
+		padding-left: 0px;
+	}
+	.container span {
+		display: inline-block;
+		width: 100px;
+	}
+	
+	
+</style>
+
+
+</body>
+</html>
